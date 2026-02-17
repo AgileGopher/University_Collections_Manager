@@ -17,6 +17,7 @@ public class Student extends Person {
 	{
 		DEFAULT_GPA = 0.0;
 		MAX_GPA     = 4.0;
+		
 	}
 	
 	
