@@ -8,11 +8,8 @@ public class Professor extends Person {
 	// professor fields
 	private String rank;
 	
-	
-	// symbolic constants
-	
-	
 
+	
 	// constructors
 	public Professor() {
 		super();

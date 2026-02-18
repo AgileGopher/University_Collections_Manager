@@ -11,15 +11,6 @@ import management.RecordManager;
 
 public class ReportGenerator {
 	
-	/*
-	 *   must implement following
-	 * 
-	 * - Top N students overall by GPA 														 DONE
-	 * - Average GPA per course 															 DONE
-	 * - Most popular course(s)																 DONE
-	 * - Search: find students by partial name (case-insensitive) using streams              DONE
-	 * 
-	 */
 	
 	// fields
 	RecordManager<Student> students = new RecordManager<>();
@@ -35,8 +26,7 @@ public class ReportGenerator {
 
 	
 	// class methods
-	public List<Student> topStudents(int num){
-		// TODO kb.validateInt(num);
+	public List<Student> topStudentsByGPA(int num){
 		List<Student> topRated = students
 				.all()
 				.stream()
@@ -49,7 +39,7 @@ public class ReportGenerator {
 	
 	
 	// method to return the average gpa per course
-	public Map<String, Double> avgByCourse(){
+	public Map<String, Double> avgGPAByCourse(){
 		Map<String, Double> avgMap = students
 				.all()
 				.stream()
