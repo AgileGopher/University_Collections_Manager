@@ -1,5 +1,8 @@
 package data;
 
+import enums.ProfessorRank;
+import exceptions.InvalidRankException;
+
 public class Professor extends Person {
 
 	// professor fields
@@ -25,7 +28,9 @@ public class Professor extends Person {
 	
 	// validators
 	private static void validateRank(String rank) {
-		
+		if(!ProfessorRank.isValidRank(rank)) {
+			throw new InvalidRankException("Invalid Professor rank: " + rank);
+		}
 	}
 	
 	
